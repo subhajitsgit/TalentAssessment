@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script>
+        //Create a model
+        var myapp = angular.module("myModule", []);
+
+        //Register the controller with the module
+        myapp.controller = ("myController", function ($scope) {
+            $scope.message = "Hello World"
+        });
+    </script>
+</head>
+<body ng-app>
+    <input type="text" ng-model="name" />
+    <div>Hello {{name}}</div>
+    <div ng-bind="name"></div>
+
+    <div ng-init="myFavline=[{name:'PHP',extension:'.php'},{name:'Javascript',extension:'.js'}]">
+        <p ng-repeat="language in myFavline">
+            Name:{{language.name}}<br />
+            Extension:{{language.extension}}<br />
+        </p>
+    </div>
+
+</body>
+</html>

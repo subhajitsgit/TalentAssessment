@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <script src="Script/angular.min.js"></script>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-init="[{name:PHP,extension:'.php'},{name:'Javascript,extension:js'}]">
+        <p ng-repeat="language in myFavline">
+            Name:{{language.name}}<br />
+            Extension:{{language.extension}}<br />
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="controller_intro">
+<head >
+    <title></title>
+    <script src="Script/angular.min.js"></script>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="language">
+        Select your favourite language: 
+        <button ng-click="php()">PHP</button>
+        <button ng-click="javascript()">Javascript</button>
+        <button ng-click="csharp()">C#</button>
+        <button ng-click="sql()">Sql</button><br />
+        <p>You have selected: {{myFavLanguage}}</p>
+    </div>
+    <script type="text/javascript">
+        var application = angular.module('controller_intro', []);
+        application.controller('language', function ($scope) {
+           
+            $scope.php = function () {
+                $scope.myFavLanguage = "PHP";
+            };
+            $scope.javascript = function () {
+                $scope.myFavLanguage = "Javascript";
+            };
+            $scope.csharp = function () {
+                $scope.myFavLanguage = "C#";
+            };
+            $scope.sql = function () {
+                $scope.myFavLanguage = "Sql";
+            };
+        });
+    </script>
+</body>
+</html>
